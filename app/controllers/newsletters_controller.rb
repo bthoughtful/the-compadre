@@ -1,11 +1,10 @@
 class NewslettersController < ApplicationController
   require 'httparty'
 
-  def signup
+  def create
     puts "\nnew newsletter sign up......"
 
-    list_id = '129f3ea30c'
-    url = "https://us15.api.mailchimp.com/3.0/lists/#{list_id}/members"
+    url = "https://us15.api.mailchimp.com/3.0/lists/#{ENV['MC_LIST_ID']}/members"
     options = {
       basic_auth: { username: "apikey", password: ENV['MC_API_KEY'] },
       body: {
@@ -25,14 +24,13 @@ class NewslettersController < ApplicationController
 
     if response.code == 200
       puts "Success\n"
-      # flash.now[:notice] = 'Thanks for signing up! Please check your email to confirm your subscription.'
-      # render 'static_pages/index'
-      redirect_to(root_path, notice: 'Thanks for signing up! Please check your email to confirm your subscription.')
+      flash[:success] = 'Thanks for signing up! Please check your email to confirm your subscription.'
+      redirect_to root_path
     else
       body = JSON.parse(response.body)
       puts "ERROR: #{body["title"]}: #{body["detail"]}\n"
-      # flash.now[:error] = "ERROR: #{body["title"]}: #{body["detail"]}"
-      redirect_to(root_path, notice: "ERROR: #{body["title"]}: #{body["detail"]}")
+      flash[:error] = "ERROR: #{body["title"]}: #{body["detail"]}"
+      redirect_to root_path
     end
   end
 end

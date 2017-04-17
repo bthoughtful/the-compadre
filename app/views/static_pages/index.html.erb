@@ -1,2 +1,23 @@
-<h1>The Compadre</h1>
-<p>a really cool email newsletter that you really want to sign up for</p>
+<header>
+  <h1>The Compadre</h1>
+  <p>a really cool email newsletter that you really want to sign up for</p>
+</header>
+
+<div class="nl-signup">
+  <h2>Sign up for our newsletter</h2>
+
+  <% flash.each do |key, value| %>
+  <div class="flash <%= key %>"><%= value %></div>
+  <% end %>
+
+  <%= form_tag({controller: 'newsletters', action: 'create'},
+  method: 'post', id: 'newsletter-form', remote: true) do %>
+
+  <div>
+    <%= label_tag :email, 'email' %>
+    <%= email_field_tag :email, nil, required: true %>
+  </div>
+
+  <%= submit_tag 'sign up!', id: 'nl-signup-btn' %>
+  <% end %>
+</div>
