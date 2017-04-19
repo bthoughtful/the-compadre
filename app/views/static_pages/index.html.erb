@@ -1,23 +1,30 @@
-<header>
-  <h1>The Compadre</h1>
-  <p>a really cool email newsletter that you really want to sign up for</p>
-</header>
+<div class="headline-background">
+  <div class="filter">
+    <div class="main-content">
+      <header>
+        <div class="main-header">
+          <h1>The Compadre</h1>
+          <p>Slowing the news down and explaining it. Ya' Welcome.</p>
+        </div>
+      </header>
 
-<div class="nl-signup">
-  <h2>Sign up for our newsletter</h2>
+      <div class="nl-signup">
+        <h2>Because you need another newsletter...</h2>
 
-  <% flash.each do |key, value| %>
-  <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
+        <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
 
-  <%= form_tag({controller: 'newsletters', action: 'create'},
-  method: 'post', id: 'newsletter-form', remote: true) do %>
+        <%= form_tag({controller: 'newsletters', action: 'create'},
+        method: 'post', id: 'newsletter-form', remote: true) do %>
 
-  <div>
-    <%= label_tag :email, 'email' %>
-    <%= email_field_tag :email, nil, required: true %>
+        <div class="">
+          <%= email_field_tag :email, nil, required: true, placeholder: 'email' %>
+          <%= button_tag "Subscribe", id: 'nl-subscribe-btn', data: { disable_with: "subscribing..." } %>
+        </div>
+
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <%= submit_tag 'sign up!', id: 'nl-signup-btn' %>
-  <% end %>
 </div>
