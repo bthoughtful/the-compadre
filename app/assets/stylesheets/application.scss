@@ -10,18 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
-
- $headline-font: 'Noto Sans', sans-serif;
- $body-font: 'Noto Serif', serif;
-
-body {
-  font-family: $body-font;
-  padding: 0;
-  margin: 0;
-}
-
-h1, h2, h3 { font-family: $headline-font; }
