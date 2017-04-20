@@ -1,10 +1,10 @@
 <div class="headline-background">
-  <div class="filter">
+  <div class="flex-container pad-section filter headline-filter">
     <div class="main-content">
       <header>
         <div class="main-header">
           <h1>The Compadre</h1>
-          <p>Slowing the news down and explaining it. Ya' Welcome.</p>
+          <p>Slow-jammin' the news. One topic at a time. Ya' Welcome.</p>
         </div>
       </header>
 
@@ -17,14 +17,26 @@
 
         <%= form_tag({controller: 'newsletters', action: 'create'},
         method: 'post', id: 'newsletter-form', remote: true) do %>
-
-        <div class="">
           <%= email_field_tag :email, nil, required: true, placeholder: 'email' %>
           <%= button_tag "Subscribe", id: 'nl-subscribe-btn', data: { disable_with: "subscribing..." } %>
-        </div>
-
         <% end %>
       </div>
+
+      <script src="https://use.fontawesome.com/593f05305f.js"></script>
+      <i id="scroll-down" class="fa fa-caret-down fa-3x"></i>
+    </div>
+  </div>
+</div>
+
+<div class="content-background">
+  <div class="pad-section filter content-filter">
+    <div class="content-body">
+      <p>
+        Ever feel like the news is yelling at you?  Well, we did. And we can’t say we love it. Unlike the peaceful, majestic feelings these background pictures offer, the news makes us feel tired. Tons of angles, opinions, analysis, and commentary yet we don’t feel more informed, just a little more confused and overloaded.
+      </p>
+      <p>
+        Enter: The Compadre. Each Tuesday and Thursday we send out an easily digestible email breaking down one topic in the news. What’s qualified us to determine which topic to help explain? Nothing, except maybe arrogance and some time on our hands. Anywhoo, just read and enjoy. When all the questions you have while reading the news start to go away (because we are answering them) you can send us a sappy “you’ve-changed-my-life, thank-you-thank-you-thank-you” email and we’ll celebrate good times, c’mon.
+      </p>
     </div>
   </div>
 </div>
