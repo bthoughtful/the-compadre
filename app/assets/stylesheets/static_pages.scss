@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
+
+$headline-font: 'Noto Sans', sans-serif;
+$body-font: 'Noto Serif', serif;
+
+body {
+ font-family: $body-font;
+ padding: 0;
+ margin: 0;
+}
+
+h1, h2, h3 { font-family: $headline-font; }
+
 .flex-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-dir-col { flex-direction: column; }
+
+.title-pg-cont {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -15,7 +36,7 @@
   position: relative;
   background-image: url('https://source.unsplash.com/NsUcpqfcpCE');
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .filter {
@@ -27,7 +48,7 @@
 
 .content-filter { background-color: rgba(0,0,0,0.4); }
 
-.pad-section { padding: 10px; }
+.pad-section { padding: 10px 0; }
 
 .main-header {
   color: #fff;
@@ -44,11 +65,16 @@
     margin-bottom: 4rem;
     margin-top: 4px;
   }
+
+  @media all and (max-width: 648px) {
+    h1 { font-size: 2.75rem; }
+    p { font-size: 0.75rem; }
+  }
 }
 
 .nl-signup {
+  margin-bottom: 60px;
   width: 90%;
-  margin: 0 auto;
   text-align: center;
 
   h2 {
@@ -62,6 +88,12 @@
     padding: 4px 8px;
     transform: translateX(2px);
     width: 40%;
+  }
+
+  @media all and (max-width: 648px) {
+    width: 100%;
+
+    h2 { font-size: 0.75rem; }
   }
 }
 
@@ -79,13 +111,28 @@
   }
 }
 
-#scroll-down {
-  margin: 40px auto;
-  text-align: center;
+.scroll-cont {
+  flex-direction: column;
+
+  p {
+    color: #fff;
+    margin: 0;
+  }
+}
+
+.scroll-cont-up {
+  p { font-family: $headline-font; }
+
+  @media all and (max-width: 648px) {
+    p { font-size: 0.75rem; }
+  }
+}
+
+#scroll-down, #scroll-up {
   width: 60px;
-  display: block;
   color: #fff;
   transition: scale, 0.15s;
+  text-align: center;
 
   &:hover, &:focus {
     cursor: pointer;
@@ -95,7 +142,20 @@
 
 .content-body {
   color: #fff;
-  font-size: 3.5rem;
-  margin: 100px auto;
-  width: 85%;
+  margin: 0 auto;
+  width: 90%;
+
+  p {
+    font-size: 2.75vw;
+  }
+
+  @media all and (max-width: 1200px) {
+    p { font-size: 3vw; }
+  }
+  @media all and (max-width: 964px) {
+    p { font-size: 4vw; }
+  }
+  @media all and (max-width: 648px) {
+    p { font-size: 4.5vw; }
+  }
 }
