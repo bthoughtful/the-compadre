@@ -84,6 +84,7 @@ h1, h2, h3 { font-family: $headline-font; }
 
   input[type='email'] {
     border: none;
+    border-radius: 0;
     font-size: 1rem;
     padding: 4px 8px;
     transform: translateX(2px);
@@ -124,9 +125,14 @@ h1, h2, h3 { font-family: $headline-font; }
 .scroll-cont-up {
   margin-top: 40px;
 
-  p { font-family: $headline-font; }
+  p {
+    font-family: $headline-font;
+    margin-bottom: 20px;
+  }
 
   @media all and (max-width: 648px) {
+    margin-top: 0;
+
     p { font-size: 0.75rem; }
   }
 }
@@ -153,12 +159,12 @@ h1, h2, h3 { font-family: $headline-font; }
   }
 
   @media all and (max-width: 1200px) {
-    p { font-size: 3vw; }
+    p { font-size: 3.25vw; }
   }
   @media all and (max-width: 964px) {
-    p { font-size: 4vw; }
+    p { font-size: 3.5vw; }
   }
   @media all and (max-width: 648px) {
-    p { font-size: 4.5vw; }
+    p { font-size: 3.75vw; }
   }
 }
