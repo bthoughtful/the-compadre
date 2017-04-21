@@ -18,15 +18,13 @@ function snapScroll() {
       $('html,body').animate({ scrollTop: bottomSection.offsetTop });
     }
   });
-
-  //touchmove works for iOS, I don't know if Android supports it...
-  $(document).on('touchmove', function() {
-    $(document).trigger('mousewheel');
+  // prevents manual scroll on mobile touch. use arrow buttons instead.
+  $(document).on('touchmove', function(event) {
+    event.preventDefault();
   });
 }
 
 $( document ).on('turbolinks:load', function() {
-
   snapScroll();
 
   $('#scroll-down').on('click', function() {
@@ -36,5 +34,4 @@ $( document ).on('turbolinks:load', function() {
   $('#scroll-up').on('click', function() {
     $('html, body').animate({ scrollTop: $('.headline-background').offset().top }, 500);
   });
-
 });
