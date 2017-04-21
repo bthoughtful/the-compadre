@@ -1,7 +1,7 @@
 function snapScroll() {
   var delay = false;
 
-  $(document).on('mousewheel DOMMouseScroll', function(event) {
+  $(document).on('mousewheel DOMMouseScroll touchmove', function(event) {
     event.preventDefault();
     if(delay) return;
 
@@ -17,6 +17,12 @@ function snapScroll() {
     } else {
       $('html,body').animate({ scrollTop: bottomSection.offsetTop });
     }
+  });
+
+  //touchmove works for iOS, I don't know if Android supports it...
+  $(document).on('touchmove', function() {
+    $(document).trigger('mousewheel');
+    console.log('triggered mousewheel from touchmove');
   });
 }
 
