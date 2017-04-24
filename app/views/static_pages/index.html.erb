@@ -11,14 +11,14 @@
       <div class="nl-signup">
         <h2>Because you need another newsletter...</h2>
 
-        <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-        <% end %>
-
         <%= form_tag({controller: 'newsletters', action: 'create'},
         method: 'post', id: 'newsletter-form', remote: true) do %>
           <%= email_field_tag :email, nil, required: true, placeholder: 'email' %>
           <%= button_tag "Subscribe", id: 'nl-subscribe-btn', data: { disable_with: "subscribing..." } %>
+        <% end %>
+
+        <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
         <% end %>
       </div>
 
