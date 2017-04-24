@@ -6,7 +6,7 @@ function snapScroll() {
     if(delay) return;
 
     delay = true;
-    setTimeout(function(){ delay = false }, 200)
+    setTimeout(function(){ delay = false }, 400)
 
     var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
     var topSection = document.querySelector('#topSection');

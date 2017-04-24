@@ -11,6 +11,14 @@ body {
 
 h1, h2, h3 { font-family: $headline-font; }
 
+.flash {
+  font-family: $headline-font;
+  color: #fff;
+  margin: 20px 16px -20px;
+
+  &.error { color: darkred; }
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -34,7 +42,7 @@ h1, h2, h3 { font-family: $headline-font; }
 
 .content-background {
   position: relative;
-  background-image: url('https://source.unsplash.com/NsUcpqfcpCE');
+  background-image: url('https://source.unsplash.com/znpemFcGDuU');
   background-size: cover;
   height: 100vh;
 }
@@ -73,7 +81,7 @@ h1, h2, h3 { font-family: $headline-font; }
 }
 
 .nl-signup {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   width: 90%;
   text-align: center;
 
