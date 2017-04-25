@@ -21,6 +21,7 @@ h1, h2, h3 { font-family: $headline-font; }
 
 .flex-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -177,4 +178,10 @@ h1, h2, h3 { font-family: $headline-font; }
   @media all and (max-width: 648px) {
     p { font-size: 3.75vw; }
   }
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.75rem;
 }
