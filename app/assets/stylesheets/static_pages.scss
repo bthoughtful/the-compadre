@@ -34,18 +34,19 @@ h1, h2, h3 { font-family: $headline-font; }
   align-items: center;
 }
 
-.headline-background {
-  background-image: url('https://source.unsplash.com/DlCr9IujpJI');
+.background-banner {
   background-size: cover;
+  background-position: center bottom;
   height: 100vh;
   position: relative;
 }
 
-.content-background {
-  position: relative;
+#headline-background {
+  background-image: url('https://source.unsplash.com/DlCr9IujpJI');
+}
+
+#content-background {
   background-image: url('https://source.unsplash.com/znpemFcGDuU');
-  background-size: cover;
-  height: 100vh;
 }
 
 .filter {

@@ -9,8 +9,8 @@ function snapScroll() {
     setTimeout(function(){ delay = false }, 400)
 
     var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-    var topSection = document.querySelector('#topSection');
-    var bottomSection = document.querySelector('#bottomSection');
+    var topSection = document.querySelector('#headline-background');
+    var bottomSection = document.querySelector('#content-background');
 
     if (wd > 0) {
       $('html,body').animate({ scrollTop: topSection.offsetTop });
@@ -28,10 +28,10 @@ $( document ).on('turbolinks:load', function() {
   snapScroll();
 
   $('#scroll-down').on('click', function() {
-    $('html, body').animate({ scrollTop: $('.content-background').offset().top }, 500);
+    $('html, body').animate({ scrollTop: $('#content-background').offset().top }, 500);
   });
 
   $('#scroll-up').on('click', function() {
-    $('html, body').animate({ scrollTop: $('.headline-background').offset().top }, 500);
+    $('html, body').animate({ scrollTop: $('#headline-background').offset().top }, 500);
   });
 });
