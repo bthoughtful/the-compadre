@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
 gem 'httparty'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'normalize-rails'
