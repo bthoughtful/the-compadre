@@ -1,0 +1,16 @@
+<h1>Previous Newsletter Articles</h1>
+
+<ol>
+<% @articles.each do |a| %>
+    <li>
+      <%= link_to article_path(a.id) do %>
+        <div id="art-<%= a.id %>" class="">
+          <h3>"<%= a.title %>"</h3>
+          <span>author: <%= a.author %> </span>
+          <p><%= a.body %></p>
+          <p>created at: <%= a.created_at %></p>
+        </div>
+      <% end %>
+    </li>
+<% end %>
+</ol>
