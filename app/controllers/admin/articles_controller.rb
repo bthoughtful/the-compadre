@@ -2,7 +2,7 @@ class Admin::ArticlesController < AdminController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 5)
+    @articles = Article.paginate(page: params[:page])
   end
 
   def show
