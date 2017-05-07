@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   get 'articles/index'
   get 'articles/show'
 
-  devise_for :users
-
   resources :articles, only: [:index, :show]
   resource :newsletters, only: :create
 
+  devise_for :users
+
   namespace :admin do
     get 'base/index'
+    resources :articles
   end
 end
