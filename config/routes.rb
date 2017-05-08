@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    get 'base/index'
+    get '/', to: 'base#index'
     resources :articles
   end
 end

@@ -20,10 +20,10 @@
     <% end %>
   </head>
 
-  <body>
+  <body class="c-<%= controller_name %> a-<%= action_name %>">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
+
     <%= yield %>
   </body>
 </html>

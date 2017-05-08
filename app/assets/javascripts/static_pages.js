@@ -25,13 +25,16 @@ function snapScroll() {
 }
 
 $( document ).on('turbolinks:load', function() {
-  snapScroll();
+  // only run this script on static_pages#index
+  if( $('.c-static_pages.a-index').length > 0 ) {
+    snapScroll();
 
-  $('#scroll-down').on('click', function() {
-    $('html, body').animate({ scrollTop: $('#content-background').offset().top }, 500);
-  });
+    $('#scroll-down').on('click', function() {
+      $('html, body').animate({ scrollTop: $('#content-background').offset().top }, 500);
+    });
 
-  $('#scroll-up').on('click', function() {
-    $('html, body').animate({ scrollTop: $('#headline-background').offset().top }, 500);
-  });
+    $('#scroll-up').on('click', function() {
+      $('html, body').animate({ scrollTop: $('#headline-background').offset().top }, 500);
+    });
+  }
 });
