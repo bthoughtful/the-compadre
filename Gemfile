@@ -44,6 +44,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'bootstrap-will_paginate', '~> 1.0'
 gem 'redcarpet', '~> 3.4'
 gem 'simplemde', '~> 0.1.0'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'dotenv-rails'

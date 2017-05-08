@@ -18,3 +18,8 @@
 //= require static_pages
 //= require simplemde
 //= require admin
+
+$( document ).on('turbolinks:load', function() {
+  const flash = $('.flash');
+  $("#flash-close-btn").click(() => flash.hide());
+});

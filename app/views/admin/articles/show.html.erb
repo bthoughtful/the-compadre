@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <p>"<%= @article.title %>"</p>
-    <p>- <%= @article.author %></p>
-    <p>Created: <%= @article.created_at %></p>
+    <p>Title: "<%= @article.title %>"</p>
+    <p>Author: <%= @article.author %></p>
+    <p>Created: <%= @article.created_at.strftime("%m/%d/%Y") %></p>
   </div>
 </div>
 
