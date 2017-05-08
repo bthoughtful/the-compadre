@@ -16,3 +16,5 @@
 //= require jquery_ujs
 //= require google_analytics
 //= require static_pages
+//= require simplemde
+//= require admin

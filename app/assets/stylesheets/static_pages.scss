@@ -186,3 +186,10 @@ h1, h2, h3 { font-family: $headline-font; }
   bottom: 10px;
   font-size: 0.75rem;
 }
+
+.article-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pagination-cntr { text-align: center; }

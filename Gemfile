@@ -42,6 +42,8 @@ gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.7.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'redcarpet', '~> 3.4'
+gem 'simplemde', '~> 0.1.0'
 
 group :development, :test do
   gem 'dotenv-rails'
