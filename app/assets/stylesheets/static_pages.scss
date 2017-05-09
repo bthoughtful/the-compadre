@@ -17,9 +17,6 @@ h1, h2, h3 { font-family: $headline-font; }
   font-size: 1.5rem;
   margin-bottom: 0;
   padding: 10px;
-  // position: absolute;
-  // top: 0;
-  // z-index: 5;
 
   &.notice { background: lightblue; }
   &.error, &.alert { background: darkred; }
@@ -212,3 +209,12 @@ h1, h2, h3 { font-family: $headline-font; }
 }
 
 .pagination-cntr { text-align: center; }
+
+.main-nav {
+  background: none;
+  border: none;
+
+  .btn-group { margin: 20px; }
+}
+
+.menu-icon { padding: 4px 6px 0; }

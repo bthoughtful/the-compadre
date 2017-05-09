@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require google_analytics
 //= require static_pages
+//= require bootstrap-sprockets
 //= require simplemde
 //= require admin
 

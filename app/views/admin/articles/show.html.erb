@@ -1,21 +1,18 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <p>Title: "<%= @article.title %>"</p>
-    <p>Author: <%= @article.author %></p>
-    <p>Created: <%= @article.created_at.strftime("%m/%d/%Y") %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p>Title: "<%= @article.title %>"</p>
+      <p>Author: <%= @article.author %></p>
+      <p>Created: <%= @article.created_at.strftime("%m/%d/%Y") %></p>
+      <p><%= link_to 'Back to Articles', admin_articles_path %></p>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <p><%= link_to 'Back to Articles', admin_articles_path %></p>
-  </div>
-</div>
+  <hr />
 
-<hr />
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <p><%= markdown(@article.body) %></p>
-  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p><%= markdown(@article.body) %></p>
+    </div>
+  </div>  
 </div>

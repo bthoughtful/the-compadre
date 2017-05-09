@@ -1,32 +1,33 @@
-<div class="row">
-  <div class="col-md-4">
-    <h1>All Articles</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 class="admin-headline">All Articles</h1>
+      <p><%= link_to 'Return to Admin Dashboard', admin_path %></p>
+      <%= link_to 'Create Article', new_admin_article_path, class: 'btn btn-success btn-lg pull-right', role: 'button' %>
+
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Created At</th>
+          <th colspan="3">Action</th>
+        </tr>
+
+        <% @articles.each do |a| %>
+        <tr>
+          <td><%= a.title %></td>
+          <td><%= a.author %></td>
+          <td><%= a.created_at %></td>
+          <td><%= link_to 'Show', admin_article_path(a.id), class: 'btn btn-info btn-block', role: 'button' %></td>
+          <td><%= link_to 'Edit', edit_admin_article_path(a.id), class: 'btn btn-warning btn-block', role: 'button' %></td>
+          <td><%= link_to 'Delete', admin_article_path(a.id), class: 'btn btn-danger btn-block', role: 'button', method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </table>
+
+      <%= will_paginate %>
+    </div>
   </div>
-  <div class="col-md-2 col-md-offset-6">
-    <%= link_to 'Create Article', new_admin_article_path, class: 'btn btn-success btn-lg', role: 'button' %>
-  </div>
+
+
 </div>
-
-<table class="table table-striped table-bordered">
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Created At</th>
-    <th colspan="3">Action</th>
-  </tr>
-
-  <% @articles.each do |a| %>
-    <tr>
-      <td><%= a.title %></td>
-      <td><%= a.author %></td>
-      <td><%= a.created_at %></td>
-      <td><%= link_to 'Show', admin_article_path(a.id), class: 'btn btn-info btn-block', role: 'button' %></td>
-      <td><%= link_to 'Edit', edit_admin_article_path(a.id), class: 'btn btn-warning btn-block', role: 'button' %></td>
-      <td><%= link_to 'Delete', admin_article_path(a.id), class: 'btn btn-danger btn-block', role: 'button', method: 'delete', data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= will_paginate %>
-
-<p><%= link_to 'Return to Admin Dashboard', admin_path %></p>

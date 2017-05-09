@@ -21,6 +21,8 @@
   </head>
 
   <body class="c-<%= controller_name %> a-<%= action_name %>">
+    <%= render '/layouts/main_nav' %>
+    
     <% flash.each do |key, value| %>
       <p class="flash <%= key %>">
         <%= value %>

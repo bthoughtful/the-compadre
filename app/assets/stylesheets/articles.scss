@@ -1,3 +1,44 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.c-articles {
+  &.a-show {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.c-articles.a-index {
+  background: grey url('https://source.unsplash.com/emZus7dBLIw');
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 100vh;
+
+  .articles-headline {
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .article-list {
+    a { color: #fff; }
+
+    li {
+      margin-bottom:  40px;
+      transition: all 0.05s;
+    }
+  }
+
+  .article-list li:nth-child(even) {
+    &:hover { transform: rotate(1deg); }
+  }
+
+  .article-list li:nth-child(odd) {
+    &:hover { transform: rotate(-1deg); }
+  }
+}
+
+table { background: #fff; }
