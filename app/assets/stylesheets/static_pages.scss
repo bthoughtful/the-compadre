@@ -17,6 +17,10 @@ h1, h2, h3 { font-family: $headline-font; }
   font-size: 1.5rem;
   margin-bottom: 0;
   padding: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
 
   &.notice { background: lightblue; }
   &.error, &.alert { background: darkred; }
@@ -213,6 +217,7 @@ h1, h2, h3 { font-family: $headline-font; }
 .main-nav {
   background: none;
   border: none;
+  height: 60px;
 
   .btn-group { margin: 20px; }
 }

@@ -10,7 +10,7 @@
               <%= link_to article_path(a.id) do %>
                 <div id="article-<%= a.id %>" class="article-block">
                   <h2>"<%= a.title %>"</h2>
-                  <p>The intro will go here...</p>
+                  <p><%= a.intro %></p>
                   <span><%= a.created_at.strftime("%m/%d/%Y") %></span>
                 </div>
               <% end %>
