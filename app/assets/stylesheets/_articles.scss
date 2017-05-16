@@ -1,7 +1,3 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .c-articles {
   &.a-show {
     img {
@@ -12,6 +8,8 @@
   }
 }
 
+.header-link { margin-top: 20px }
+
 .c-articles.a-index {
   background: grey url('https://source.unsplash.com/emZus7dBLIw');
   background-size: cover;
@@ -21,9 +19,13 @@
   .articles-headline {
     color: #fff;
     margin-bottom: 40px;
+    margin-top: 100px;
   }
 
   .article-list {
+    list-style: none;
+    padding-left: 0;
+
     a { color: #fff; }
 
     li {
@@ -39,6 +41,8 @@
   .article-list li:nth-child(odd) {
     &:hover { transform: rotate(-1deg); }
   }
+
+  table { background: #fff; }
 }
 
-table { background: #fff; }
+.pagination-cntr { text-align: center; }
