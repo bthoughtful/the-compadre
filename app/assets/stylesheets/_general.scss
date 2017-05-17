@@ -1,0 +1,10 @@
+@import 'variables';
+
+html, body {
+ font-family: $body-font;
+ font-size: 16px;
+ padding: 0;
+ margin: 0;
+}
+
+h1, h2, h3 { font-family: $headline-font; }

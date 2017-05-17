@@ -20,7 +20,16 @@
     <% end %>
   </head>
 
-  <body>
+  <body class="c-<%= controller_name %> a-<%= action_name %>">
+    <%= render '/layouts/main_nav' %>
+    
+    <% flash.each do |key, value| %>
+      <p class="flash <%= key %>">
+        <%= value %>
+        <i id="flash-close-btn" class="fa fa-times-circle" aria-hidden="true"></i>
+      </p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

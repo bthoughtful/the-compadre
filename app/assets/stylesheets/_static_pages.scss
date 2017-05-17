@@ -1,23 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
-
-$headline-font: 'Noto Sans', sans-serif;
-$body-font: 'Noto Serif', serif;
-
-body {
- font-family: $body-font;
- padding: 0;
- margin: 0;
-}
-
-h1, h2, h3 { font-family: $headline-font; }
-
-.flash {
-  font-family: $headline-font;
-  color: #fff;
-  margin: 20px 16px -20px;
-
-  &.error { color: darkred; }
-}
+@import 'variables';
 
 .flex-container {
   display: flex;
@@ -186,3 +167,5 @@ h1, h2, h3 { font-family: $headline-font; }
   bottom: 10px;
   font-size: 0.75rem;
 }
+
+.menu-icon { padding: 4px 7px 2px; }

@@ -14,4 +14,13 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
-//= require_tree .
+//= require google_analytics
+//= require static_pages
+//= require bootstrap-sprockets
+//= require simplemde
+//= require admin
+
+$( document ).on('turbolinks:load', function() {
+  const flash = $('.flash');
+  $("#flash-close-btn").click(() => flash.hide());
+});
