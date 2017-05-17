@@ -1,5 +1,7 @@
-<p>Welcome <%= @email %>!</p>
+<%= image_tag 'compadre_tagline_banner.jpg' %>
 
-<p>You can confirm your account email through the link below:</p>
+<h2>Welcome to The Compadre, <%= @name %>!</h2>
+
+<h3>You can confirm your account email through the link below:</h3>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
