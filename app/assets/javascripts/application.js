@@ -20,7 +20,8 @@
 //= require simplemde
 //= require admin
 
-$( document ).on('turbolinks:load', function() {
-  const flash = $('.flash');
-  $("#flash-close-btn").click(() => flash.hide());
+$(document).on('turbolinks:load', function() {
+  $("#flash-close-btn").click(function() {
+    $('.flash').hide;
+  });
 });
