@@ -22,6 +22,6 @@
 
 $(document).on('turbolinks:load', function() {
   $("#flash-close-btn").click(function() {
-    $('.flash').hide;
+    $('.flash').hide();
   });
 });
