@@ -3,7 +3,7 @@
     <div class="col-md-6 col-md-offset-3">
       <p>Title: "<%= @article.title %>"</p>
       <p>Author: <%= @article.author %></p>
-      <p>Created: <%= @article.created_at.strftime("%m/%d/%Y") %></p>
+      <p>Published: <%= parse_date(@article.published_at) %></p>
       <p><%= link_to 'Back to Articles', admin_articles_path %></p>
     </div>
   </div>
@@ -14,5 +14,5 @@
     <div class="col-md-6 col-md-offset-3">
       <p><%= markdown(@article.body) %></p>
     </div>
-  </div>  
+  </div>
 </div>

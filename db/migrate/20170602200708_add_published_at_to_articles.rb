@@ -1,0 +1,7 @@
+class AddPublishedAtToArticles < ActiveRecord::Migration[5.1]
+  def change
+    add_column :articles, :published_at, :string
+
+    add_index :articles, :published_at
+  end
+end
