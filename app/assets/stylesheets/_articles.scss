@@ -1,7 +1,7 @@
 .c-articles {
   &.a-show {
     background: #f9f9f9;
-    
+
     img {
       display: block;
       max-width: 100%;
@@ -13,7 +13,7 @@
 .header-link { margin-top: 20px }
 
 .c-articles.a-index {
-  background: grey url('https://source.unsplash.com/emZus7dBLIw');
+  background: grey url('https://source.unsplash.com/5S9SeI-HFZA');
   background-size: cover;
   background-position: bottom center;
   min-height: 100vh;
@@ -47,3 +47,8 @@
 }
 
 .pagination-cntr { text-align: center; }
+
+.published_date {
+  color: grey;
+  font-size: 0.8rem;
+}
